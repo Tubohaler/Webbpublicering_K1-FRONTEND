@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 import "./App.css";
 
-const socket = io("http://localhost:4000", { autoConnect: false });
+const socket = io(process.env.REACT_APP_BACKEND_URL, { autoConnect: false });
 socket.connect();
 
 function App() {
